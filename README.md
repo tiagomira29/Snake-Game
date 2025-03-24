@@ -1,11 +1,13 @@
 # Snake-Game
-Multi-client server for snake game, can be played online, however someone must be hosting the server.
+This is a multi-client version of the classic Snake game that can be played online. One player must host the server for others to join.
 
-In contraire of the classical snake game, this one the snake is eating bugs of different values (from 1 to 5), the snake wins the game when it reaches 50 points. There may also be wasps which if the player bumps on them makes them loose 5 points. When to players bump heads their points become the average of the sum of their points.
+Unlike the traditional Snake game, players collect bugs worth different point values (ranging from 1 to 5). The goal is to reach 50 points to win. Watch out for wasps — colliding with one will cause the player to lose 5 points.
 
-A countdown is also implemented for when a player becomes inactive, kicking the player of the game.
+If two players bump into each other head-on, their scores are averaged and both players receive the new value.
 
-Both server and clients have to be compiled with the Makefile before hand. Compilation is possible by just running "make".
+To prevent inactive players from stalling the game, a countdown timer is implemented. If a player becomes inactive for too long, they are automatically removed from the game.
+
+Note: Both the server and clients must be compiled using the provided Makefile. Simply run make to compile everything.
 
 ## Collaborators
 - [Pedro Apolónia]() – Co-developer / Original Collaborator
