@@ -5,4 +5,4 @@ In contraire of the classical snake game, this one the snake is eating bugs of d
 
 A countdown is also implemented for when a player becomes inactive, kicking the player of the game.
 
-Both server and clients have to be compile with the Makefile before hand. Compilation is possible by just running "make".
+Both server and clients have to be compiled with the Makefile before hand. Compilation is possible by just running "make".
