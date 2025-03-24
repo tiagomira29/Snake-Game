@@ -10,4 +10,4 @@ To prevent inactive players from stalling the game, a countdown timer is impleme
 Note: Both the server and clients must be compiled using the provided Makefile. Simply run make to compile everything.
 
 ## Collaborators
-- [Pedro Apolónia]() – Co-developer / Original Collaborator
+- [Pedro Apolónia](https://github.com/apolonia-p) – Co-developer / Original Collaborator
