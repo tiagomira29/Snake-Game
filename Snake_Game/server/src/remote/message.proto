@@ -1,0 +1,40 @@
+syntax = "proto2";
+
+enum direction_t {
+  UP = 0;
+  DOWN = 1;
+  LEFT = 2;
+  RIGTH = 3;
+}
+
+/* fields -> required / optional / repeated */
+
+message display_msg {
+    required int32 ch = 0;
+    required int32 pos_x = 1;
+    required int32 pos_y = 2;
+}
+
+/* clients to server */
+message remote_char {
+    required int32 message_type = 0;
+    required direction_t direction = 1;
+    required int32 key = 2;
+
+    optional int32 id = 3; /* needed for machine & human movement */
+    optional int32 n_identities = 4; /* needed for machine client initialization */
+}
+
+/* server to human client */
+message remote_lizard {
+    required int32 value = 0; /* current game score */
+    optional bytes ch = 1 [max_size = 1]; /* effectively creates a variable of same size as char, will have to cast it to char tho */
+    optional int32 key = 2;
+}
+
+/* server to machine client */
+message remote_machine {
+    repeated int32 int_values = 0 [packed = true, (validate.rules).int = {max: 10}];
+    optional int32 n_identities = 1;
+    optional int32 key = 2;
+}
